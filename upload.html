@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="src/favicon.png">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/uikit-tm.css">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+</head>
+
+<body>
+    <div class="uk-offcanvas-content">
+        <!-- Navbar -->
+        <nav class="uk-navbar-container tm-navbar-container uk-sticky uk-active uk-sticky-fixed" uk-sticky="media: 960">
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar">
+                    <!-- Logo -->
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="index.html"><img uk-svg src="src/uikit-logo.svg" width="28" class="uk-margin-small-right" hidden="true" alt="">Coding Library</a>
+                    </div>
+                    <!-- Items -->
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="document.html">Tài liệu</a></li>
+                            <li><a href="request.html">Yêu cầu</a></li>
+                            <li><a href="#">Upload bài</a></li>
+                        </ul>
+                        <div class="uk-navbar-item uk-visible@m">
+                            <a href="signin.html" class="uk-button uk-button-default tm-button-default uk-icon">Đăng nhập</a>
+                            <a href="signup.html" class="uk-button uk-button-default tm-button-default uk-icon uk-margin-small-left">Đăng ký</a>
+                        </div>
+                        <!-- Toggle Icon -->
+                        <a uk-navbar-toggle-icon href="#offcanvas" uk-toggle class="uk-navbar-toggle uk-hidden@m uk-navbar-toggle-icon uk-icon"></a>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+        <!-- Navaside -->
+        <aside class="tm-sidebar-left uk-visible@m">
+            <h3>Chuyên đề</h3>
+            <ul class="uk-nav uk-nav-primary uk-nav-parent-icon tm-nav" id="uk-darkness" uk-nav="multiple: true">
+                <li><a href="#">Duyệt vét - Đệ quy - Quay lui</a></li>
+                <li><a href="algorithm.html">Tham lam</a></li>
+                <li><a href="#">Duyệt nhánh cận</a></li>
+                <li><a href="#">Sắp xếp</a></li>
+                <li class="uk-parent">
+                    <a href="#">Quy hoạch động</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">Quy hoạch động</a></li>
+                        <li><a href="#">Quy hoạch động dùng nhân ma trận</a></li>
+                        <li><a href="#">Quy hoạch động - Vị trí cấu hình - Thứ tự từ điển</a></li>
+                        <li><a href="#">Quy hoạch động - Dãy con tăng dài nhất</a></li>
+                        <li><a href="#">Quy hoạch động trạng thái</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Thuật trò chơi</a></li>
+                <li><a href="#">Toán (Số học - Tổ hợp - Hình học)</a></li>
+                <li><a href="#">Xử lí số nguyên lớn</a></li>
+                <li><a href="#">Cây (Quy hoạch động - LCA)</a></li>
+                <li><a href="#">Trie</a></li>
+                <li><a href="#">Z Function - KMP - Hash</a></li>
+                <li><a href="#">Sắp xếp Topo</a></li>
+                <li><a href="#">Duyệt bằng cách chia đôi tập hợp</a></li>
+                <li><a href="#">Chặt nhị phân</a></li>
+                <li class="uk-parent">
+                    <a href="#">Cấu trúc dữ liệu</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">Heap (Priority Queue) + BST (Map - Set - Treap)</a></li>
+                        <li><a href="#">Stack</a></li>
+                        <li><a href="#">Queue</a></li>
+                        <li><a href="#">Deque</a></li>
+                        <li><a href="#">Binary Indexed Tree (BIT)</a></li>
+                        <li><a href="#">Segment Tree (Interval Tree)</a></li>
+                        <li><a href="#">Disjoint Set Union (DSU)</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <a href="#">Đồ thị</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">DFS + BFS</a></li>
+                        <li><a href="#">Cây khung (Kruskal - Prim)</a></li>
+                        <li><a href="#">Đường đi ngắn nhất (Dijkstra)</a></li>
+                        <li><a href="#">Chu trình Euler - Chu trình Hamilton</a></li>
+                        <li><a href="#">Thuật toán Tarjan (Cầu khớp - Liên thông mạnh - Song liên thông)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Luồng và Bộ ghép</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </aside>
+        <!-- Content -->
+        <div class="tm-main uk-section uk-section-default">
+            <div class="uk-container uk-container-expand uk-position-relative">
+                <!-- About us -->
+                <section>
+                    <h1 class="uk-h1 tm-heading-fragment">Upload bài</h1>
+                    <p class="uk-text-lead uk-text-medium">
+                        Khuyến khích mọi người upload mã nguồn trên <a href="https://ideone.com/" class="uk-button uk-button-text uk-button-text-link">Ideone</a> và sau đó chia sẻ link xuống phần dưới đây! <br>
+                    </p>
+                    <form class="uk-form-horizontal">
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Mã bài</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" placeholder="NKPALIN - Chuỗi đối xứng">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Link bài</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" placeholder="https://vn.spoj.com/problems/NKPALIN/">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Hướng dẫn giải</label>
+                            <div class="uk-form-controls">
+                                <textarea cols="30" rows="4" placeholder="Hướng dẫn..." class="uk-textarea uk-textarea-auto"></textarea>
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Mã nguồn C++</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" placeholder="https://ideone.com/...">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Mã nguồn Pascal</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" type="text" placeholder="https://ideone.com/...">
+                            </div>
+                        </div>
+                        <button class="uk-button uk-button-primary uk-button-large uk-margin">Upload</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="offcanvas" class="uk-offcanvas" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <div class="uk-panel">
+                <div class="uk-margin-large-bottom" uk-margin>
+                    <a class="uk-button uk-button-primary uk-width-1-1" href="signin.html">Đăng nhập</a>
+                    <a class="uk-button uk-button-primary uk-width-1-1" href="signup.html">Đăng ký</a>
+                </div>
+                <div class="uk-darkness">
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="document.html">Tài liệu</a></h5>
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="request.html">Yêu cầu</a></h5>
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="#">Upload bài</a></h5>
+                </div>
+                <hr class="uk-margin-large">
+                <h3 class="uk-margin-small-top">Chuyên đề</h3>
+                <ul class="uk-nav uk-nav-default uk-nav-parent-icon tm-nav" id="uk-darkness" uk-nav="multiple: true">
+                    <li><a href="#">Duyệt vét - Đệ quy - Quay lui</a></li>
+                    <li><a href="algorithm.html">Tham lam</a></li>
+                    <li><a href="#">Duyệt nhánh cận</a></li>
+                    <li><a href="#">Sắp xếp</a></li>
+                    <li class="uk-parent">
+                        <a href="#">Quy hoạch động</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">Quy hoạch động</a></li>
+                            <li><a href="#">Quy hoạch động dùng nhân ma trận</a></li>
+                            <li><a href="#">Quy hoạch động - Vị trí cấu hình - Thứ tự từ điển</a></li>
+                            <li><a href="#">Quy hoạch động - Dãy con tăng dài nhất</a></li>
+                            <li><a href="#">Quy hoạch động trạng thái</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Thuật trò chơi</a></li>
+                    <li><a href="#">Toán (Số học - Tổ hợp - Hình học)</a></li>
+                    <li><a href="#">Xử lí số nguyên lớn</a></li>
+                    <li><a href="#">Cây (Quy hoạch động - LCA)</a></li>
+                    <li><a href="#">Trie</a></li>
+                    <li><a href="#">Z Function - KMP - Hash</a></li>
+                    <li><a href="#">Sắp xếp Topo</a></li>
+                    <li><a href="#">Duyệt bằng cách chia đôi tập hợp</a></li>
+                    <li><a href="#">Chặt nhị phân</a></li>
+                    <li class="uk-parent">
+                        <a href="#">Cấu trúc dữ liệu</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">Heap (Priority Queue) + BST (Map - Set - Treap)</a></li>
+                            <li><a href="#">Stack</a></li>
+                            <li><a href="#">Queue</a></li>
+                            <li><a href="#">Deque</a></li>
+                            <li><a href="#">Binary Indexed Tree (BIT)</a></li>
+                            <li><a href="#">Segment Tree (Interval Tree)</a></li>
+                            <li><a href="#">Disjoint Set Union (DSU)</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent">
+                        <a href="#">Đồ thị</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">DFS + BFS</a></li>
+                            <li><a href="#">Cây khung (Kruskal - Prim)</a></li>
+                            <li><a href="#">Đường đi ngắn nhất (Dijkstra)</a></li>
+                            <li><a href="#">Chu trình Euler - Chu trình Hamilton</a></li>
+                            <li><a href="#">Thuật toán Tarjan (Cầu khớp - Liên thông mạnh - Song liên thông)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Luồng và Bộ ghép</a></li>
+                    <li><a href="#">Khác</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

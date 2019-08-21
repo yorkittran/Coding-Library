@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="src/favicon.png">
+    <title>ANT - Kiến</title>
+    <link rel="stylesheet" href="css/uikit-tm.css">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#first-comment-reply").click(function() {
+                $("#first-comment").show();
+            });
+            $("#second-comment-reply").click(function() {
+                $("#second-comment").show();
+            });
+            $("#third-comment-reply").click(function() {
+                $("#third-comment").show();
+            });
+            $("#fourth-comment-reply").click(function() {
+                $("#fourth-comment").show();
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="uk-offcanvas-content">
+        <!-- Navbar -->
+        <nav class="uk-navbar-container tm-navbar-container uk-sticky uk-active uk-sticky-fixed" uk-sticky="media: 960">
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar">
+                    <!-- Logo -->
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="index.html"><img uk-svg src="src/uikit-logo.svg" width="28" class="uk-margin-small-right" hidden="true" alt="">Coding Library</a>
+                    </div>
+                    <!-- Items -->
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="document.html">Tài liệu</a></li>
+                            <li><a href="request.html">Yêu cầu</a></li>
+                            <li><a href="upload.html">Upload bài</a></li>
+                        </ul>
+                        <div class="uk-navbar-item uk-visible@m">
+                            <a href="signin.html" class="uk-button uk-button-default tm-button-default uk-icon">Đăng nhập</a>
+                            <a href="signup.html" class="uk-button uk-button-default tm-button-default uk-icon uk-margin-small-left">Đăng ký</a>
+                        </div>
+                        <!-- Toggle Icon -->
+                        <a uk-navbar-toggle-icon href="#offcanvas" uk-toggle class="uk-navbar-toggle uk-hidden@m uk-navbar-toggle-icon uk-icon"></a>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+        <!-- Navaside -->
+        <aside class="tm-sidebar-left uk-visible@m">
+            <h3>Chuyên đề</h3>
+            <ul class="uk-nav uk-nav-primary uk-nav-parent-icon tm-nav" id="uk-darkness" uk-nav="multiple: true">
+                <li><a href="#">Duyệt vét - Đệ quy - Quay lui</a></li>
+                <li><a href="algorithm.html">Tham lam</a></li>
+                <li><a href="#">Duyệt nhánh cận</a></li>
+                <li><a href="#">Sắp xếp</a></li>
+                <li class="uk-parent">
+                    <a href="#">Quy hoạch động</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">Quy hoạch động</a></li>
+                        <li><a href="#">Quy hoạch động dùng nhân ma trận</a></li>
+                        <li><a href="#">Quy hoạch động - Vị trí cấu hình - Thứ tự từ điển</a></li>
+                        <li><a href="#">Quy hoạch động - Dãy con tăng dài nhất</a></li>
+                        <li><a href="#">Quy hoạch động trạng thái</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Thuật trò chơi</a></li>
+                <li><a href="#">Toán (Số học - Tổ hợp - Hình học)</a></li>
+                <li><a href="#">Xử lí số nguyên lớn</a></li>
+                <li><a href="#">Cây (Quy hoạch động - LCA)</a></li>
+                <li><a href="#">Trie</a></li>
+                <li><a href="#">Z Function - KMP - Hash</a></li>
+                <li><a href="#">Sắp xếp Topo</a></li>
+                <li><a href="#">Duyệt bằng cách chia đôi tập hợp</a></li>
+                <li><a href="#">Chặt nhị phân</a></li>
+                <li class="uk-parent">
+                    <a href="#">Cấu trúc dữ liệu</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">Heap (Priority Queue) + BST (Map - Set - Treap)</a></li>
+                        <li><a href="#">Stack</a></li>
+                        <li><a href="#">Queue</a></li>
+                        <li><a href="#">Deque</a></li>
+                        <li><a href="#">Binary Indexed Tree (BIT)</a></li>
+                        <li><a href="#">Segment Tree (Interval Tree)</a></li>
+                        <li><a href="#">Disjoint Set Union (DSU)</a></li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <a href="#">Đồ thị</a>
+                    <ul class="uk-nav-sub" id="uk-darkness">
+                        <li><a href="#">DFS + BFS</a></li>
+                        <li><a href="#">Cây khung (Kruskal - Prim)</a></li>
+                        <li><a href="#">Đường đi ngắn nhất (Dijkstra)</a></li>
+                        <li><a href="#">Chu trình Euler - Chu trình Hamilton</a></li>
+                        <li><a href="#">Thuật toán Tarjan (Cầu khớp - Liên thông mạnh - Song liên thông)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Luồng và Bộ ghép</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </aside>
+        <!-- Content -->
+        <div class="tm-main uk-section uk-section-default">
+            <div class="uk-container uk-container-expand uk-position-relative">
+                <!-- About us -->
+                <section>
+                    <h1 class="uk-h1 tm-heading-fragment">ANT - Kiến</h1>
+                    <h3 class="uk-h3 uk-text-uppercase">Đề bài</h3>
+                    <p class="uk-text-lead uk-text-medium">
+                        Họ nhà kiến tổ chức một trò chơi như sau để mừng năm mới. Những chú kiến quây thành một vòng tròn. Kiến chúa sẽ đưa ra một con số và gọi nó là số M (Mồi). Bắt đầu, kiến chúa đếm số 1, theo chiều kim đồng hồ, các chú kiến lần lượt đếm số tiếp theo. Đến lượt chú kiến đếm phải số đúng bằng số M thì sẽ phải đi ra khỏi vòng tròn. Việc đếm lại từ 1 bắt đầu từ chú kiến tiếp theo, theo chiều kim đồng hồ. <br><br> Trò chơi kết thúc, khi chỉ còn lại một chú kiến. Chú kiến đó sẽ nhận được món qùa đầu năm của họ nhà kiến. <br>
+                        <img class="uk-align-center" src="src/ANT.gif" alt="" width="300" uk-img> Biết số chú kiến ban đầu trên vòng tròn và số M. Hãy xác định số thứ tự của chú kiến sẽ nhận được phần thưởng may mắn. Các chú kiến được đánh số thứ tự theo chiều kim đồng hồ, bắt đầu từ kiến chúa có số hiệu 1.
+                    </p>
+                    <h3 class="uk-h3 uk-text-uppercase">Dữ liệu</h3>
+                    <ul class="uk-list uk-list-bullet uk-text-lead uk-text-medium">
+                        <li>Dòng 1: chứa số nguyên dương N, là số chú kiến trên vòng tròn.</li>
+                        <li>Dòng 2: chứa số nguyên dương.</li>
+                    </ul>
+                    <h3 class="uk-h3 uk-text-uppercase">Kết quả</h3>
+                    <p class="uk-text-lead uk-text-medium">
+                        Gồm 1 dòng duy nhất, chứa số thứ tự của chú kiến sẽ nhận được món quà đầu năm.
+                    </p>
+                    <h3 class="uk-h3 uk-text-uppercase">Giới hạn</h3>
+                    <ul class="uk-list uk-list-bullet uk-text-lead uk-text-medium">
+                        <li>1 ≤ N ≤ 10<sup>12</sup></li>
+                        <li>3 ≤ M ≤ 10<sup>6</sup></li>
+                        <li>M ≤ N</li>
+                    </ul>
+                    <h3 class="uk-h3 uk-text-uppercase">Ví dụ</h3>
+                    <pre><code>Dữ liệu</code>
+7
+3
+                        
+<code>Kết quả</code>
+4
+                        
+<code>Giải thích</code>
+Thứ tự những chú kiến phải ra khỏi vòng tròn lần lượt là: 3 6 2 7 5 1. 
+Chú kiến 4 là chú kiến may mắn!</pre>
+                    <h3 class="uk-h3 uk-text-uppercase">Hướng dẫn giải</h3>
+                    <p class="uk-text-lead uk-text-medium">
+                        Thuật toán hoán vị Josephus
+                    </p>
+                </section>
+                <hr class="uk-margin-large">
+                <section>
+                    <h1 class="uk-h1 tm-heading-fragment">Bình luận</h1>
+                    <ul class="uk-comment-list">
+                        <li>
+                            <article class="uk-comment">
+                                <header class="uk-comment-header uk-position-relative">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="src/No%20Ava.png" width="55" height="55" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <li class="uk-text-uppercase">12 days ago</li>
+                                                <li><a id="first-comment-reply" href="#first-comment" uk-scroll>Reply</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p class="uk-text-lead uk-text-small">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </article>
+                            <ul>
+                                <li>
+                                    <article class="uk-comment uk-comment-primary">
+                                        <header class="uk-comment-header uk-position-relative">
+                                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                        <li class="uk-text-uppercase">12 days ago</li>
+                                                        <li><a id="second-comment-reply" href="#second-comment" uk-scroll>Reply</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="uk-comment-body">
+                                            <p class="uk-text-lead uk-text-small">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <ul>
+                                        <li id="second-comment" class="uk-hidden">
+                                            <div class="uk-grid-medium" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <textarea cols="30" rows="3" placeholder="Bình luận..." class="uk-textarea"></textarea>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <button class="uk-button uk-button-primary uk-button-small" style="height: 55px">Đăng</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <article class="uk-comment">
+                                        <header class="uk-comment-header uk-position-relative">
+                                            <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="src/No%20Ava.png" width="55" height="55" alt="">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                        <li class="uk-text-uppercase">12 days ago</li>
+                                                        <li><a id="third-comment-reply" href="#third-comment" uk-scroll>Reply</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="uk-comment-body">
+                                            <p class="uk-text-lead uk-text-small">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <ul>
+                                        <li id="third-comment" class="uk-hidden">
+                                            <div class="uk-grid-medium" uk-grid>
+                                                <div class="uk-width-auto">
+                                                    <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                                </div>
+                                                <div class="uk-width-expand">
+                                                    <textarea cols="30" rows="3" placeholder="Bình luận..." class="uk-textarea"></textarea>
+                                                </div>
+                                                <div class="uk-width-auto">
+                                                    <button class="uk-button uk-button-primary uk-button-small" style="height: 55px">Đăng</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="first-comment" class="uk-hidden">
+                                    <div class="uk-grid-medium" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <textarea cols="30" rows="3" placeholder="Bình luận..." class="uk-textarea"></textarea>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <button class="uk-button uk-button-primary uk-button-small" style="height: 55px">Đăng</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <article class="uk-comment">
+                                <header class="uk-comment-header uk-position-relative">
+                                    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="src/No%20Ava.png" width="55" height="55" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
+                                            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                                <li class="uk-text-uppercase">12 days ago</li>
+                                                <li><a id="fourth-comment-reply" href="#fourth-comment" uk-scroll>Reply</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="uk-comment-body">
+                                    <p class="uk-text-lead uk-text-small">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </article>
+                            <ul>
+                                <li id="fourth-comment" class="uk-hidden">
+                                    <div class="uk-grid-medium" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <textarea cols="30" rows="3" placeholder="Bình luận..." class="uk-textarea"></textarea>
+                                        </div>
+                                        <div class="uk-width-auto">
+                                            <button class="uk-button uk-button-primary uk-button-small" style="height: 55px">Đăng</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="uk-grid-medium" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar" src="src/Ava.jpg" width="55" height="55" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <textarea cols="30" rows="3" placeholder="Bình luận..." class="uk-textarea"></textarea>
+                                </div>
+                                <div class="uk-width-auto">
+                                    <button class="uk-button uk-button-primary uk-button-large" style="height: 55px">Đăng</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div id="offcanvas" class="uk-offcanvas" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <div class="uk-panel">
+                <div class="uk-margin-large-bottom" uk-margin>
+                    <a class="uk-button uk-button-primary uk-width-1-1" href="signin.html">Đăng nhập</a>
+                    <a class="uk-button uk-button-primary uk-width-1-1" href="signup.html">Đăng ký</a>
+                </div>
+                <div class="uk-darkness">
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="document.html">Tài liệu</a></h5>
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="request.html">Yêu cầu</a></h5>
+                    <h5 class="uk-text-uppercase uk-text-center uk-margin-small-top"><a href="upload.html">Upload bài</a></h5>
+                </div>
+                <hr class="uk-margin-large">
+                <h3 class="uk-margin-small-top">Chuyên đề</h3>
+                <ul class="uk-nav uk-nav-default uk-nav-parent-icon tm-nav" id="uk-darkness" uk-nav="multiple: true">
+                    <li><a href="#">Duyệt vét - Đệ quy - Quay lui</a></li>
+                    <li><a href="algorithm.html">Tham lam</a></li>
+                    <li><a href="#">Duyệt nhánh cận</a></li>
+                    <li><a href="#">Sắp xếp</a></li>
+                    <li class="uk-parent">
+                        <a href="#">Quy hoạch động</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">Quy hoạch động</a></li>
+                            <li><a href="#">Quy hoạch động dùng nhân ma trận</a></li>
+                            <li><a href="#">Quy hoạch động - Vị trí cấu hình - Thứ tự từ điển</a></li>
+                            <li><a href="#">Quy hoạch động - Dãy con tăng dài nhất</a></li>
+                            <li><a href="#">Quy hoạch động trạng thái</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Thuật trò chơi</a></li>
+                    <li><a href="#">Toán (Số học - Tổ hợp - Hình học)</a></li>
+                    <li><a href="#">Xử lí số nguyên lớn</a></li>
+                    <li><a href="#">Cây (Quy hoạch động - LCA)</a></li>
+                    <li><a href="#">Trie</a></li>
+                    <li><a href="#">Z Function - KMP - Hash</a></li>
+                    <li><a href="#">Sắp xếp Topo</a></li>
+                    <li><a href="#">Duyệt bằng cách chia đôi tập hợp</a></li>
+                    <li><a href="#">Chặt nhị phân</a></li>
+                    <li class="uk-parent">
+                        <a href="#">Cấu trúc dữ liệu</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">Heap (Priority Queue) + BST (Map - Set - Treap)</a></li>
+                            <li><a href="#">Stack</a></li>
+                            <li><a href="#">Queue</a></li>
+                            <li><a href="#">Deque</a></li>
+                            <li><a href="#">Binary Indexed Tree (BIT)</a></li>
+                            <li><a href="#">Segment Tree (Interval Tree)</a></li>
+                            <li><a href="#">Disjoint Set Union (DSU)</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent">
+                        <a href="#">Đồ thị</a>
+                        <ul class="uk-nav-sub" id="uk-darkness">
+                            <li><a href="#">DFS + BFS</a></li>
+                            <li><a href="#">Cây khung (Kruskal - Prim)</a></li>
+                            <li><a href="#">Đường đi ngắn nhất (Dijkstra)</a></li>
+                            <li><a href="#">Chu trình Euler - Chu trình Hamilton</a></li>
+                            <li><a href="#">Thuật toán Tarjan (Cầu khớp - Liên thông mạnh - Song liên thông)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Luồng và Bộ ghép</a></li>
+                    <li><a href="#">Khác</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

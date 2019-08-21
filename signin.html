@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="src/favicon.png">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/uikit-tm.css">
+    <script src="js/uikit.js"></script>
+    <script src="js/uikit-icons.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script type="text/javascript">
+        function DirectHomePage() {
+            window.location = "index.html";
+        }
+        $(function() {
+            $("#form").validate({
+                rules: {
+                    txtUserName: {
+                        required: true,
+                        minlength: 6
+                    },
+                    txtPassword: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 10
+                    }
+                },
+                messages: {
+                    txtUserName: {
+                        required: "Vui lòng điền tên tài khoản",
+                        minlength: "Tên tài khoản không được dưới 6 kí tự"
+                    },
+                    txtPassword: {
+                        required: "Vui lòng điền mật khẩu",
+                        minlength: "Mật khẩu không được dưới 6 kí tự",
+                        maxlength: "Mật khẩu không được quá 10 kí tự"
+                    }
+                },
+                highlight: function(element) {
+                    $(element).closest("input").addClass("uk-form-danger").removeClass("uk-form-success");
+                },
+                unhighlight: function(element) {
+                    $(element).closest("input").removeClass("uk-form-danger").addClass("uk-form-success");
+                },
+                errorClass: "uk-text-danger",
+                errorPlacement: function(error, element) {
+                    var placement = $(element).data('error');
+                    if (placement) {
+                        $(placement).append(error)
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                submitHandler: function(form) {
+                    UIkit.notification({
+                        message: "Đăng nhập thành công",
+                        status: 'success'
+                    });
+                    setTimeout('DirectHomePage()', 2000);
+                },
+                invalidHandler: function(form) {
+                    UIkit.notification({
+                        message: "Đăng nhập không thành công",
+                        status: 'danger'
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="uk-form-center">
+    <div class="uk-container-smallest uk-align-center">
+        <div class="uk-card uk-card-small uk-card-default uk-card-body">
+            <img src="src/uikit-logo-blue.png" width="60" class="uk-align-center uk-margin-small-top uk-margin-small-bottom" alt="">
+            <h3 class="uk-margin-medium-bottom uk-margin-small-top">Đăng nhập</h3>
+            <form action="" class="uk-form-stacked" id="form">
+                <div class="uk-margin">
+                    <div class="uk-form-controls uk-inline uk-width-1-1">
+                        <span class="uk-form-icon" uk-icon="user"></span>
+                        <input class="uk-input" type="text" placeholder="Tên tài khoản" name="txtUserName" data-error="#er1">
+                    </div>
+                    <span id="er1"></span>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-form-controls uk-inline uk-width-1-1">
+                        <span class="uk-form-icon" uk-icon="lock"></span>
+                        <input class="uk-input" type="password" placeholder="Mật khẩu" name="txtPassword" data-error="#er2">
+                    </div>
+                    <span id="er2"></span>
+                </div>
+                <a class="uk-text-success" href="signup.html">Tạo tài khoản</a>
+                <a class="uk-text-danger uk-align-right">Quên mật khẩu</a>
+                <button class="uk-button uk-button-primary uk-button-large uk-width-1-1" type="submit">ĐĂNG NHẬP</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
